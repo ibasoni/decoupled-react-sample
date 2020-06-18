@@ -1,18 +1,9 @@
 import { useStoreState } from "pullstate";
-import React, { FunctionComponent, useEffect } from "react";
-import { fetchUsers } from "./users-api";
+import React, { FunctionComponent } from "react";
 import { UsersStore } from "./users-store";
 
 const UsersList: FunctionComponent<UsersListProps> = ({ onSelect }) => {
   const users = useStoreState(UsersStore, (s) => s.users);
-
-  useEffect(() => {
-    fetchUsers().then((users) => {
-      UsersStore.update((s) => {
-        s.users = users;
-      });
-    });
-  }, []);
 
   if (!users) {
     return <div>Loading users ...</div>;
