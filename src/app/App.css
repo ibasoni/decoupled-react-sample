@@ -1,0 +1,48 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.users-list {
+  overflow-y: auto;
+  flex-grow: 0;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  width: 30%;
+  margin-right: 20px;
+}
+
+.user-list-item {
+  border-bottom: 1px dashed #e5e5e5;
+  transition: all 100ms linear;
+  padding: 10px;
+}
+.user-list-item:hover {
+  background-color: #e5e5e5;
+  cursor: pointer;
+}
+
+.posts-list {
+  overflow-y: auto;
+  flex-grow: 0;
+  width: 70%;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  padding: 10px;
+}
+.posts-list-item {
+  border-bottom: 1px dashed #e5e5e5;
+}
